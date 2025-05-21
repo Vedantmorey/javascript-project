@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Practice.</title>
+</head>
+<body>
+ <ul>
+  <li class="days">Monday </li>
+  <li class="days">Tuesday</li>
+  <li class="days">Wednusday</li>
+  <li class="days">Tuesday </li>
+  <li class="days">Friday</li>
+  <li class="days">Saturday</li>
+ </ul>
+ 
+ <ol class="orderlist">
+  <li class="list">Java</li>
+ </ol>
+
+ <script>
+  const dayone = document.querySelector('.days');
+  dayone.style.color="Red";
+
+  const div = document.createElement('div');
+  div.className="main";
+  div.style.color="red";
+  div.style.padding="20px";
+  div.appendChild(document.createTextNode("Hello"));
+  document.body.appendChild(div);
+
+function creatediv (name){
+ const div1 = document.createElement('div');
+ div1.style.color="blue";
+ div1.style.padding="20px";
+ div1.appendChild(document.createTextNode(`my name is ${name}`));
+ document.body.appendChild(div1);
+};
+
+function addlist(li){
+const addlist = document.createElement('li');
+addlist.appendChild(document.createTextNode(li));
+document.querySelector('.orderlist').appendChild(addlist);
+console.log(addlist);
+};
+
+creatediv("vedant");
+creatediv("Suhani");
+creatediv("Kashish");
+addlist("SQL");
+addlist("Javascript");
+addlist("Typescript");
+  </Script>
+</body>
+</html>
